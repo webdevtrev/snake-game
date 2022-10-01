@@ -1,6 +1,15 @@
-*{
+* {
   box-sizing: border-box;
 }
-body, html{
+body,
+html {
   margin: auto;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/Roboto-Regular.ttf);
+}
+
+* {
+  font-family: "Roboto";
 }

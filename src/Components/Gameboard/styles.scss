@@ -1,23 +1,48 @@
-.Gameboard{
-    margin: 0;
-    padding: 0;
+.Gameboard {
+  margin: auto;
+  padding: 0;
+  position: relative;
+  width: fit-content;
+  .PreText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: inline-block;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    border: 3px solid black;
+    z-index: 20;
+    padding: 1rem;
+  }
+  .Row {
+    width: fit-content;
+  }
+  .Tile {
     height: 50px;
-    .Tile{
-        height: 50px;
-        width: 50px;
-        border: 1px solid white;
-        background-color: skyblue;
-        display: inline-block;
+    width: 50px;
+    border: 1px solid white;
+    background-color: skyblue;
+    display: inline-block;
 
-        &.Snake{
-            background: yellow;
-        }
-        &.Food{
-            background: blue;
-        }
-        &.Fail{
-            background: black;
-        }
-
+    &.Snake {
+      background: yellow;
     }
+    &.Food {
+      background: blue;
+    }
+    &.Fail {
+      background: black;
+      animation: fail 150ms linear infinite alternate;
+    }
+  }
+}
+
+@keyframes fail {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }

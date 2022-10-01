@@ -1,0 +1,13 @@
+.Header {
+  width: fit-content;
+  max-width: 80%;
+  margin: auto;
+  margin-bottom: 1rem;
+  text-align: center;
+  kbd {
+    font-family: monospace;
+    border: 1px solid black;
+    margin: 0 0.5rem;
+    padding: 0 0.25rem;
+  }
+}
