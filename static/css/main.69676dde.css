@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  margin: auto;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../media/Roboto-Regular.fc2b5060f7accec5cf74.ttf");
+}
+* {
+  font-family: "Roboto";
+}
+.Gameboard {
+  margin: auto;
+  padding: 0;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Gameboard .PreText {
+  background-color: #fff;
+  border: 3px solid #000;
+  display: inline-block;
+  left: 50%;
+  padding: 1rem;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+.Gameboard .Row {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Gameboard .Tile {
+  background-color: skyblue;
+  border: 1px solid #fff;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+.Gameboard .Tile.Snake {
+  background: #ff0;
+}
+.Gameboard .Tile.Food {
+  background: blue;
+}
+.Gameboard .Tile.Fail {
+  -webkit-animation: fail 0.15s linear infinite alternate;
+  animation: fail 0.15s linear infinite alternate;
+  background: #000;
+}
+@-webkit-keyframes fail {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fail {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.Header {
+  margin: auto auto 1rem;
+  max-width: 80%;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.Header kbd {
+  border: 1px solid #000;
+  font-family: monospace;
+  margin: 0 0.5rem;
+  padding: 0 0.25rem;
+}
+/*# sourceMappingURL=main.69676dde.css.map*/
