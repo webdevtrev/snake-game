@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.69676dde.css",
-    "main.js": "/static/js/main.a54fc22f.js",
-    "static/js/787.786e9145.chunk.js": "/static/js/787.786e9145.chunk.js",
-    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
-    "index.html": "/index.html",
-    "main.69676dde.css.map": "/static/css/main.69676dde.css.map",
-    "main.a54fc22f.js.map": "/static/js/main.a54fc22f.js.map",
-    "787.786e9145.chunk.js.map": "/static/js/787.786e9145.chunk.js.map"
+    "main.css": "/snake-game/static/css/main.80c0eb9b.css",
+    "main.js": "/snake-game/static/js/main.3ee05b79.js",
+    "static/js/787.786e9145.chunk.js": "/snake-game/static/js/787.786e9145.chunk.js",
+    "static/media/Roboto-Regular.ttf": "/snake-game/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "index.html": "/snake-game/index.html",
+    "main.80c0eb9b.css.map": "/snake-game/static/css/main.80c0eb9b.css.map",
+    "main.3ee05b79.js.map": "/snake-game/static/js/main.3ee05b79.js.map",
+    "787.786e9145.chunk.js.map": "/snake-game/static/js/787.786e9145.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.69676dde.css",
-    "static/js/main.a54fc22f.js"
+    "static/css/main.80c0eb9b.css",
+    "static/js/main.3ee05b79.js"
   ]
 }
