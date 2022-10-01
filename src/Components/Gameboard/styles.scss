@@ -1,0 +1,23 @@
+.Gameboard{
+    margin: 0;
+    padding: 0;
+    height: 50px;
+    .Tile{
+        height: 50px;
+        width: 50px;
+        border: 1px solid white;
+        background-color: skyblue;
+        display: inline-block;
+
+        &.Snake{
+            background: yellow;
+        }
+        &.Food{
+            background: blue;
+        }
+        &.Fail{
+            background: black;
+        }
+
+    }
+}
