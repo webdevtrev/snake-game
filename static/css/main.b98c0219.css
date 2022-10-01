@@ -1,0 +1,2 @@
+*{box-sizing:border-box}body,html{margin:auto}.Gameboard{height:50px;margin:0;padding:0}.Gameboard .Tile{background-color:skyblue;border:1px solid #fff;display:inline-block;height:50px;width:50px}.Gameboard .Tile.Snake{background:#ff0}.Gameboard .Tile.Food{background:blue}.Gameboard .Tile.Fail{background:#000}
+/*# sourceMappingURL=main.b98c0219.css.map*/
