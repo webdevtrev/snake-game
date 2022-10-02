@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef, useMemo } from "react";
-import "./styles.scss";
+import React, { useEffect, useState, useRef, useMemo } from 'react';
+import './styles.scss';
 
 export default function Gameboard({ size }) {
   //   const [gameState, setGameState] = useState([]);
@@ -67,36 +67,36 @@ export default function Gameboard({ size }) {
   useEffect(() => {
     function addKeyHandlers(e) {
       console.log(e);
-      if (e.key === "ArrowLeft" || (e.key === "a" && direction.current !== 3)) {
+      if ((e.key === 'ArrowLeft' || e.key === 'a') && direction.current !== 3) {
         direction.current = 1;
       } else if (
-        e.key === "ArrowUp" ||
-        (e.key === "w" && direction.current !== 4)
+        (e.key === 'ArrowUp' || e.key === 'w') &&
+        direction.current !== 4
       ) {
         direction.current = 2;
       } else if (
-        e.key === "ArrowRight" ||
-        (e.key === "d" && direction.current !== 1)
+        (e.key === 'ArrowRight' || e.key === 'd') &&
+        direction.current !== 1
       ) {
         direction.current = 3;
       } else if (
-        e.key === "ArrowDown" ||
-        (e.key === "s" && direction.current !== 2)
+        (e.key === 'ArrowDown' || e.key === 's') &&
+        direction.current !== 2
       ) {
         direction.current = 4;
-      } else if (e.key === " ") {
+      } else if (e.key === ' ') {
         if (fail.current) {
-          console.log("resetting");
+          console.log('resetting');
           resetGame();
         } else {
           setStart(1);
         }
       }
     }
-    document.addEventListener("keydown", addKeyHandlers);
+    document.addEventListener('keydown', addKeyHandlers);
     // Mobile
-    document.addEventListener("touchstart", handleTouchStart, false);
-    document.addEventListener("touchmove", handleTouchMove, false);
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
 
     var xDown = null;
     var yDown = null;
@@ -141,9 +141,9 @@ export default function Gameboard({ size }) {
       yDown = null;
     }
     return () => {
-      document.removeEventListener("keydown", addKeyHandlers);
-      document.removeEventListener("touchstart", handleTouchStart, false);
-      document.removeEventListener("touchmove", handleTouchMove, false);
+      document.removeEventListener('keydown', addKeyHandlers);
+      document.removeEventListener('touchstart', handleTouchStart, false);
+      document.removeEventListener('touchmove', handleTouchMove, false);
     };
   }, []);
 
@@ -193,21 +193,21 @@ export default function Gameboard({ size }) {
     gameState.current = [...temp];
   }
   return (
-    <div className="Gameboard">
+    <div className='Gameboard'>
       {(start === 0 || start === -1) && !fail.current && (
-        <div className="PreText">
+        <div className='PreText'>
           <h2>Press the space bar to begin</h2>
         </div>
       )}
       {fail.current && (
-        <div className="PreText">
+        <div className='PreText'>
           <h2>Press the space bar to reset</h2>
         </div>
       )}
       {(start === 0 || start === 1) &&
         gameState.current?.map((row, i) => {
           return (
-            <div key={`Row-${i}`} className="Row">
+            <div key={`Row-${i}`} className='Row'>
               {row.map((tile, j) => {
                 return (
                   <div
@@ -218,10 +218,10 @@ export default function Gameboard({ size }) {
                     }}
                     className={`Tile ${
                       isSnake(i, j, snakePosition)
-                        ? `Snake ${fail.current ? "Fail" : ""}`
+                        ? `Snake ${fail.current ? 'Fail' : ''}`
                         : tile
-                        ? "Food"
-                        : ""
+                        ? 'Food'
+                        : ''
                     }`}
                   ></div>
                 );
