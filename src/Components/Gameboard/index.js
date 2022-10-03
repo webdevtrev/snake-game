@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 import React, { useEffect, useState, useRef, useMemo } from 'react';
+=======
+import React, { useEffect, useState, useRef } from 'react';
+>>>>>>> Stashed changes
 import './styles.scss';
 
 export default function Gameboard({ size }) {
@@ -23,6 +27,7 @@ export default function Gameboard({ size }) {
     }
     gameState.current = array;
     setStart(0);
+    placeFood();
   }, [size]);
   useEffect(() => {
     let snakeHead = snakePosition[snakePosition.length - 1];
@@ -86,7 +91,6 @@ export default function Gameboard({ size }) {
         direction.current = 4;
       } else if (e.key === ' ') {
         if (fail.current) {
-          console.log('resetting');
           resetGame();
         } else {
           setStart(1);
@@ -170,7 +174,6 @@ export default function Gameboard({ size }) {
     ]);
   }
   function placeFood(newArray) {
-    console.log(newArray ?? snakePosition);
     const temp = [...gameState.current];
     while (true) {
       const randomX = Math.floor(Math.random() * size);
